@@ -200,8 +200,9 @@
         <q-btn dense round flat icon="menu" class="q-mr-sm text-white" @click="right = !right">
         </q-btn>
       </q-toolbar> -->
-      <q-toolbar class="shadow-4 bg-deep-purple-8 text-white q-pa-none" style="background-color: #512fa9; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;">
+      <q-toolbar class="bg-deep-purple-8 text-white q-pa-none" style="background-color: #512fa9;
+        border-top-left-radius: 25px; border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px; border-bottom-right-radius: 25px;">
         <q-space/>
         <q-tabs narrow-indicator
         indicator-color="white"

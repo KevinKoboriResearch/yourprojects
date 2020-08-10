@@ -22,20 +22,21 @@
     <!-- <div :style="style" class="container bg-black rounded-borders"> -->
 
   <!-- <div class="q-pa-md"> -->
-    <q-layout view="hHh LpR lFr" class="">
+    <q-layout view="hHh LpR lFr" class="transparent">
       <!-- :style="style"  -->
-      <q-header reveal class="text-white">
+      <q-header reveal class="text-white bg-light-blue-9">
         <div class="row no-wrap">
-    <q-bar class="bg-grey-10 col-3 text-white q-electron-drag">
-        <q-space />
-      <div>9:41</div>
-      <q-space />
-    </q-bar>
-    <div class="col-6 bg-grey-10 ">
-      <q-bar class="bg-grey-10">
-      </q-bar>
-    </div>
-    <q-bar class="col-3 bg-grey-10  text-white q-electron-drag">
+          <q-bar class="bg-light-blue-9 col-5 text-white q-electron-drag">
+            <q-space />
+            <div>9:41</div>
+            <q-space />
+          </q-bar>
+        <div class="col-2 bg-light-blue-9">
+            <q-bar class="bg-black"  style="border-top-left-radius: 0px; border-top-right-radius: 0px;
+        border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+            </q-bar>
+        </div>
+    <q-bar class="col-5 bg-light-blue-9 text-white q-electron-drag">
       <q-space />
       <q-btn dense flat padding="none" icon="mdi-signal" />
        <!-- class="gt-xs" -->
