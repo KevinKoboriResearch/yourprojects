@@ -10,6 +10,7 @@
           iOS - Android - MacOS X - Windows - Web
         </div>
         <br>
+        <AnimatedNumbers/>
         <q-btn outline no-caps color="black" :class="'bg-' + dsChange" @click="doAndRefresh()" label="Change Theme"/>
         <q-btn outline no-caps :class="'bg-' + dsChange" @click="doAndRefresh()" label="Change Theme"/>
         <q-btn outline no-caps color="black" label="Change Theme"/>
@@ -307,7 +308,12 @@
 </template>
 
 <script>
+import AnimatedNumbers from '../../components/numbers/AnimatedNumbers'
+
 export default {
+  components: {
+    AnimatedNumbers
+  },
   data () {
     return {
       hello: false,
@@ -334,13 +340,8 @@ export default {
     }
   },
   computed: {
-    // btnColor () {
-    //   return this.color
-    // },
     drawerState: {
-      // ...mapGetters('showcase', ['getShowcase']),
       get () {
-        // return this.$store.state.showcase.drawerState
         return this.$store.getters['showcase/getShowcase']
       },
       set (val) {

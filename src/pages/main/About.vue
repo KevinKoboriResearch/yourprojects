@@ -1,40 +1,8 @@
 <template>
 <div>
-  <div class="q-pa-xl bg-grey-10 fit row wrap justify-center items-start content-center">
-    <div class="col-auto text-center text-white">
-      <img class="img-logo" :src="require('../../assets/your-trans-4.png')">
-        <div class="text-subtitle1"><strong>Criando um </strong><strong class="per-word-strong">único</strong>
-          <strong> produto, presente em todas as </strong><strong class="per-word-strong">plataformas.</strong></div>
-          <br>
-          <div class="text-weight-bolder text-h6">
-            Celulares / Tablets - Computadores / Web
-          </div>
-          <div class="text-weight-bolder text-h6">
-            iOS / Android - MacOS X / Windows
-          </div>
-          <br>
-          <!-- <q-btn outline no-caps color="white" @click="doAndRefresh()" :label="$store.getters['button/getMode']"/> -->
-          <q-tabs no-caps>
-            <q-route-tab icon="mdi-tablet-cellphone" label="Mobile" to="/" />
-            <q-route-tab icon="mdi-apple-ios" label="iPhone" to="/" />
-            <q-route-tab icon="mdi-google-play" label="Android" to="/" />
-            <q-route-tab icon="mdi-monitor-cellphone" label="PC" to="/" />
-            <q-route-tab icon="mdi-web" label="Web" to="/" />
-            <q-route-tab icon="mdi-apple" label="Mac" to="/" />
-            <q-route-tab icon="mdi-microsoft" label="Windows" to="/" />
-          </q-tabs>
-          <!-- $store.state.button.mode -->
-         <div>
-      </div>
-    </div>
-  </div>
-  <div class="q-pa-md text-justify bg-white row wrap justify-center items-start content-start">
-    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:320px">
-      <q-card class="bg-grey-10 text-white" outline>
-        <!-- <q-parallax
-        src="https://cdn.quasar.dev/img/parallax1.jpg"
-        :height="150"
-      /> -->
+  <div class="q-pa-md text-justify row wrap justify-center items-start content-start">
+    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:410px">
+      <q-card square outline>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
         <q-card-section>
@@ -62,8 +30,8 @@
       </q-card>
     </div>
 
-    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:320px">
-      <q-card class="bg-grey-10 text-white">
+    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:410px">
+      <q-card square>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
         <q-card-section>
@@ -91,8 +59,8 @@
       </q-card>
     </div>
 
-    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:320px">
-      <q-card class="bg-grey-10 text-white">
+    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:410px">
+      <q-card square>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
         <q-card-section>
@@ -119,8 +87,8 @@
         </q-card-section>
       </q-card>
     </div>
-    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:320px">
-      <q-card class="bg-grey-10 text-white">
+    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:410px">
+      <q-card square>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
         <q-card-section>
@@ -148,8 +116,8 @@
       </q-card>
     </div>
 
-    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:320px">
-      <q-card class="bg-grey-10 text-white">
+    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:410px">
+      <q-card square>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
         <q-card-section>
@@ -177,8 +145,8 @@
       </q-card>
     </div>
 
-    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:320px">
-      <q-card class="bg-grey-10 text-white">
+    <div class="q-pa-md col-xs-12 col-sm-6 col-md-4" style="max-width:410px">
+      <q-card square>
         <img src="https://cdn.quasar.dev/img/mountains.jpg">
 
         <q-card-section>
@@ -211,40 +179,21 @@
 
 <script>
 export default {
-  data () {
-    return {
-      // dynamicLyoutButtonVal: 'Modo Web'
-    }
-  },
   methods: {
-    doAndRefresh () {
-      if (this.$route.fullPath === '/') {
-        this.$router.push('/1')
-        this.$store.commit('button/updateMode', 'Modo Desktop')
-        // this.dynamicLyoutButtonVal = 'Modo Desktop'
-      // } else if (this.$route.fullPath === '/1') {
-      //   this.$router.push('/2')
-      // } else if (this.$route.fullPath === '/2') {
-      //   this.$router.push('/3')
-      // } else if (this.$route.fullPath === '/3') {
-      //   this.$router.push('/4')
+    dynamicRoute (val) {
+      const about = '/about'
+      const services = '/services'
+      const doubts = '/doubts'
+      if (this.$route.fullPath.includes(about)) {
+        this.$router.push('/' + val + about)
+      } else if (this.$route.fullPath.includes(services)) {
+        this.$router.push('/' + val + services)
+      } else if (this.$route.fullPath.includes(doubts)) {
+        this.$router.push('/' + val + doubts)
       } else {
-        this.$router.push('/')
-        this.$store.commit('button/updateMode', 'Modo Web')
-        // this.dynamicLyoutButtonVal = 'Modo Web'
-        // this.$router.go()
+        this.$router.push('/' + val)
       }
     }
-  },
-  computed: {
-    // dynamicLyoutButton: {
-    //   get () {
-    //     return this.dynamicLyoutButtonVal
-    //   },
-    //   set (val) {
-    //     this.dynamicLyoutButtonVal = val
-    //   }
-    // }
   }
 }
 </script>
